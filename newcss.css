@@ -1,0 +1,179 @@
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24 Feb 2022, 12:14:28
+    Author     : Luis Ribeiro
+*/
+:root{
+    --mainColor: #eaeaea;
+    --secondaryColor: #fff;
+    --borderColor: #c1c1c1;
+    --mainText: darkorange;
+    --secondaryText: #4b5156; 
+}
+
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, strong{
+    color: var(--mainText);
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 500px;
+}
+
+p, li, span, label{
+    color: var(--secondaryText);
+    font-family: 'Roboto Mono', monospace;
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color:  darkorange;
+}
+h1{font-size: 56px;}
+h2{font-size: 36px;}
+h3{font-size: 28px;}
+h4{font-size: 24px;}
+h5{font-size: 18px;}
+h6{font-size: 16px;}
+
+.s1{
+    background-color: var(--mainColor);
+    border-bottom: 1px solid var(--borderColor);
+    overflow: auto;
+}
+
+.s2{
+    background-color: var(--secondaryColor);
+    border-bottom: 1px solid var(--borderColor); 
+    overflow: auto;
+}
+
+.main-container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.greeting-wraper{
+    display: grid;
+    text-align: center;
+    align-content: center;
+    border: 2px blue;
+    min-height: 10em;
+}
+
+.intro-wraper{
+    background-color: black;
+    -webkit-box-shadow: 20px 11px 15px 4px rgba(0,0,0,0.79); 
+    box-shadow: 20px 11px 15px 4px rgba(0,0,0,0.79);
+    border-radius: 5px 5px 0px 0px;
+    
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3em 30em;
+    grid-template-areas:
+     'nav-wraper nav-wraper'
+     'left-column right-column'
+     ;
+
+}
+
+.nav-wraper{
+    grid-area: nav-wraper;
+}
+
+.left-column{
+    grid-area: left-column;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+img{
+    display: block;
+    margin: 0 auto;
+    height: 200px;
+    weight: 200px;
+    object-fit: cover;
+    border: 2px solid darkorange;
+}
+
+.right-column{
+    grid-area: right-column;
+    display: grid;
+    align-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+}
+
+#preview-shadow{
+    background-color: whitesmoke;
+    width: 300px;
+    height: 180px;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+
+#preview{
+    width: 300px;
+    border: 2px solid darkorange;
+    padding: 15px;
+    border-radius: 5px 5px 5px 5px;
+    
+}
+
+.about-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    padding-bottom: 50px;
+    padding-top: 50px;
+  
+}
+
+#skills{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+
+@media screen and (max-width: 1200px){
+    .main-container{
+        width: 95%;
+    }
+    
+}
+
+@media screen and (max-width: 800px){
+    
+.intro-wraper{
+    grid-template-columns: 1fr; 
+    grid-template-areas:
+     'nav-wraper'
+     'left-column'
+     'right-column'
+     ;
+
+}
+
+.right-column{
+    justify-content: center;
+}
+
+}
+
+
+
+
+
